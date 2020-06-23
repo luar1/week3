@@ -1,235 +1,228 @@
-<DOCTYPE! HTML>
-  <html>
+<!DOCTYPE html>
+<html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+</head>
 
-  <body>
-    <div class="wrapper">
-      <h1>Form templates</h1>
-      <div class="buttons">
-        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#reservation">Reservation
-          Form</button>
-        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#application">Application
-          Form</button>
-      </div>
+<body>
+  <div class="wrapper">
+    <img src="icons/undraw_eco_conscious_1y58.png" alt="Reservation Image">
+    <h1>Form templates</h1>
+    <div class="buttons">
+      <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#reservation"
+        data-backdrop="static">Reservation
+        Form</button>
+      <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#application"
+        data-backdrop="static">Application
+        Form</button>
     </div>
-    <p> &#169; Lu Ar Please DON'T steal my work, if you need help please ASK</ </p>
-      <!-- Modal Application form -->
-    <div class="modal fade" id="application" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h6 class="" id="exampleModalLabel">We are happy that you want to be part of our team</h6>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Form  -->
-            <form>
-              <!-- Name -->
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Name</label>
-                  <input type="text" class="form-control" id="" required>
-                </div>
-                <!--Last Name -->
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Last Name</label>
-                  <input type="text" class="form-control" id="" required>
-                </div>
+  </div>
+  <!-- Modal Application form -->
+  <div class=" modal fade" id="application" tabindex="-1" role="dialog" aria-labelledby="application"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="" id="header_application">We are happy that you want to be part of our team</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form  -->
+          <form>
+            <!-- Name -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name_application">Name</label>
+                <input type="text" class="form-control" id="name_application" name="name_application" required>
               </div>
-              <!--Email-->
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email address</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
-                    required>
-                </div>
-                <!--Phone -->
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4">Phone</label>
-                  <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                    placeholder="Format: 1234567890" required>
-                </div>
+              <!--Last Name -->
+              <div class="form-group col-md-6">
+                <label for="lastname_application">Last Name</label>
+                <input type="text" class="form-control" id="lastname_application" name="name_application" required>
               </div>
-              <!--Position -->
-              <div class="form-group">
-                <label for="position">Position Applied</label>
-                <select class="form-control" id="position" required>
-                  <option value="">&bull; Position &bull;</option>
-                  <option value="Designer">Designer</option>
-                  <option value="Developer">Developer</option>
-                  <option value="Product Manager">Product Manager</option>
-                  <option value="Ux Designer">Ux Designer</option>
-                  <option value="Full Stack Developer">Full Stack Developer</option>
-                </select>
+            </div>
+            <!--Email-->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="email_application">Email address</label>
+                <input type="email" class="form-control" id="email_application" name="email_application"
+                  placeholder="name@example.com" required>
               </div>
-              <!--Full or Part Time -->
-              <div class="form-row">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radios" id="full_time" value="Full-Time" required>
-                  <label class="form-check-label" for="full_time">
-                    Full-Time
-                  </label>
-                </div>
+              <!--Phone -->
+              <div class="form-group col-md-6">
+                <label for="phone_application">Phone</label>
+                <input type="tel" class="form-control" id="phone_application" name="phone_application"
+                  pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Format: 1234567890" required>
               </div>
-              <div class="form-row">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radios" id="part_time" value="Part-Time">
-                  <label class="form-check-label" for="part_time">
-                    Part-Time
-                  </label>
-                </div>
+            </div>
+            <!--Position -->
+            <div class="form-group">
+              <label for="position_application">Position Applied</label>
+              <select class="form-control" id="position_application" required>
+                <option value="">&bull; Position &bull;</option>
+                <option value="Designer">Designer</option>
+                <option value="Developer">Developer</option>
+                <option value="Product Manager">Product Manager</option>
+                <option value="Ux Designer">Ux Designer</option>
+                <option value="Full Stack Developer">Full Stack Developer</option>
+              </select>
+            </div>
+            <!--Full or Part Time -->
+            <div class="form-row">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="fulltime_application" value="Full-Time"
+                  required>
+                <label class="form-check-label" for="fulltime_application">
+                  Full-Time
+                </label>
               </div>
-              <!--Text Area-->
-
-              <div class="form-group">
-                <label for="text_area">What are your workplace skills</label>
-                <textarea class="form-control" id="text_area" rows="3" required></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radios" id="parttime_application" value="Part-Time">
+                <label class="form-check-label" for="parttime_application">
+                  Part-Time
+                </label>
               </div>
-              <!--Upload Resume -->
-              <div class="form-group">
-                <label for="upload_img">Upload your resume and a list of references</label>
-                <input type="file" class="form-control-file" id="upload_img" required>
-              </div>
-
-              <button type="submit" class="btn btn-outline-info">Send</button>
-            </form>
-          </div>
+            </div>
+            <!--Text Area-->
+            <div class="form-group">
+              <label for="txtarea_application">What are your workplace skills</label>
+              <textarea class="form-control" id="txtarea_application" rows="3" required></textarea>
+            </div>
+            <!--Upload Resume -->
+            <div class="form-group">
+              <label for="uploadimg_application">Upload your resume and a list of references</label>
+              <input type="file" class="form-control-file" id="uploadimg_application" required>
+            </div>
+            <button type="submit" class="btn btn-outline-info">Send</button>
+          </form>
         </div>
       </div>
     </div>
-    <!-- Modal Reservation form -->
-    <div class="modal fade " id="reservation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Form  -->
-            <form>
-              <div class="form-row">
-                <!-- Name  -->
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="name" placeholder="Name" autofocus required>
-                </div>
-                <!-- Last Name  -->
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="last_name" placeholder="Last name" required>
-                </div>
+  </div>
+  <!-- Modal Reservation form -->
+  <div class="modal fade " id="reservation" tabindex="-1" role="dialog" aria-labelledby="reservation"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="header_reservation">Reservation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form  -->
+          <form>
+            <div class="form-row">
+              <!-- Name  -->
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="name_reservation" id="name_reservation" placeholder="Name"
+                  autofocus required>
               </div>
-              <!-- Phone -->
-              <div class="form-group col-md-6o">
+              <!-- Last Name  -->
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="name_reservation" id="lastname_reservation"
+                  placeholder="Last name" required>
+              </div>
+            </div>
+            <!-- Phone -->
+            <div class="form-group col-md-6o">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <img src="icons/phone.svg" alt="Phone Icon">
+                  </span>
+                </div>
+                <input type="tel" class="form-control" id="phone_reservation" name="phone_reservation"
+                  pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Format: 1234567890" required>
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="form-group col-md-6o">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <img src="icons/email.png" alt="Email Icon">
+                  </span>
+                </div>
+                <input type="email" class="form-control" id="email_reservation" name="email_reservation"
+                  placeholder="name@example.com" required>
+              </div>
+            </div>
+            <!-- Date -->
+            <div class="form-group col-md-6o">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <img src="icons/calendar.png" alt="Calendar Icon">
+                  </span>
+                </div>
+                <input type="text" name="date" class="form-control datepicker" autocomplete="off"
+                  placeholder="dd/mm/2020" required>
+              </div>
+            </div>
+            <!-- Time -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
                 <div class="input-group mb-2">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <img src="icons/phone.svg">
+                      <img src="icons/clock.svg" alt="Clock Icon">
                     </span>
                   </div>
-                  <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-                    placeholder="Format: 1234567890" required>
+                  <input type="time" id="time_reservation" name="time_reservation" class="form-control" value="10:00"
+                    min="10:00" max="23:00" step="1800" required>
                 </div>
-                <!-- Email -->
-                <div class="form-group col-md-6o">
-                  <label class="sr-only" for="inlineFormInputGroup">Email</label>
-                  <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <img src="icons/email.png">
-                      </span>
-                    </div>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
-                      required>
+              </div>
+              <!-- Persons -->
+              <div class="form-group col-md-6">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <img src="icons/person.svg" alt="User Icon">
+                    </span>
                   </div>
-                  <!-- Date -->
-                  <div class="form-group col-md-6o">
-                    <label class="sr-only" for="date">Date</label>
-                    <div class="input-group mb-2">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">
-                          <img src="icons/calendar.png">
-                        </span>
-                      </div>
-                      <input type="text" name="date" class="form-control datepicker" autocomplete="off"
-                        placeholder="dd/mm/2020" required>
-                    </div>
-                    <!-- Time -->
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label class="sr-only" for="inlineFormInputGroup">Date</label>
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">
-                              <img src="icons/clock.svg">
-                            </span>
-                          </div>
-                          <input type="time" id="time" class="form-control" value="10:00" min="10:00" max="24:00"
-                            step="1800" required>
-                          <span class="validity"></span>
-            </form>
-          </div>
-        </div>
-        <!-- Persons -->
-        <div class="form-group col-md-6">
-          <label class="sr-only" for="inlineFormInputGroup">Persons</label>
-          <div class="input-group mb-2">
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <img src="icons/person.svg">
-              </span>
+                  <input type="number" id="qty_reservartion" name="qty_reservartion" class="form-control"
+                    placeholder="1 Person" min="1" max="20" required>
+                </div>
+              </div>
             </div>
-            <input type="number" id="qty" name="qty" class="form-control" placeholder="1 Person" min="1" max="20"
-              required>
-          </div>
+            <button type="submit" class="btn btn-outline-info">Reserve</button>
+          </form>
         </div>
+
       </div>
-      <div class=" form-group">
-      </div>
-      <button type="submit" class="btn btn-outline-info">Reserve</button>
-      </form>
     </div>
-    </div>
-    </div>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-      </script>
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript">
-
-      $('.datepicker').datepicker({
-        startDate: new Date()
-      });
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+  <script>
+    $('.datepicker').datepicker({
+      startDate: new Date()
+    });
+  </script>
+</body>
 
-
-  </body>
-
-  </html>
+</html>

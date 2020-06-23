@@ -8,7 +8,8 @@ html {
 body,
 main,
 h1,
-btn,
+.btn,
+h6,
 .buttons{
   margin: 0 auto;
   display: flex;
@@ -24,8 +25,9 @@ btn,
   margin:.1rem;
 }
 body{
-  background-color: #172222;
+  background: linear-gradient(to right, #514A9D, #24C6DC); 
 }
+
 h1{
   font-size: 3.5rem;
   font-family: 'Open Sans', sans-serif;
@@ -36,9 +38,31 @@ h1{
 img{
 width:1.2rem;
 }
-
 p{
   flex-flow: row wrap;
   color:#172222;
   margin: 6rem;
 }
+.datepicker {
+  padding: 4px;
+  border:1px solid red;
+  border-radius: 4px;
+}
+img[src="icons/undraw_eco_conscious_1y58.png"] {
+  margin-top: 10rem;
+  width:40%;
+}
+button[class="btn btn-outline-danger"]{
+  background-color: #f73b60;
+  color: white;
+  border:1px solid white;
+}
+/*
+@media (min-width: 1200px) {
+  img[src="icons/undraw_eco_conscious_1y58.png"] {
+    margin-top: 10rem;
+    width:40%;
+  }
+}
+
+
