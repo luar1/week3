@@ -43,10 +43,9 @@ p{
   color:#172222;
   margin: 6rem;
 }
-.datepicker {
-  padding: 4px;
-  border:1px solid red;
-  border-radius: 4px;
+
+.datepicker > span:hover{
+  cursor: pointer;
 }
 img[src="icons/undraw_eco_conscious_1y58.png"] {
   margin-top: 10rem;
@@ -57,6 +56,10 @@ button[class="btn btn-outline-danger"]{
   color: white;
   border:1px solid white;
 }
+button[id="reservation_btn"]{
+border: 2 px solid red;
+}
+
 /*
 @media (min-width: 1200px) {
   img[src="icons/undraw_eco_conscious_1y58.png"] {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 
 <head>
   <meta charset="utf-8">
@@ -10,8 +10,9 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet"
+    type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/timepicker@1.13.10/jquery.timepicker.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -40,17 +41,19 @@
         </div>
         <div class="modal-body">
           <!-- Form  -->
-          <form>
+          <form class="needs-validation" novalidate>
             <!-- Name -->
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="name_application">Name</label>
                 <input type="text" class="form-control" id="name_application" name="name_application" required>
+                <div class="invalid-feedback">Please provide your Name</div>
               </div>
               <!--Last Name -->
               <div class="form-group col-md-6">
                 <label for="lastname_application">Last Name</label>
                 <input type="text" class="form-control" id="lastname_application" name="name_application" required>
+                <div class="invalid-feedback">Please provide your Last Name</div>
               </div>
             </div>
             <!--Email-->
@@ -59,12 +62,14 @@
                 <label for="email_application">Email address</label>
                 <input type="email" class="form-control" id="email_application" name="email_application"
                   placeholder="name@example.com" required>
+                <div class="invalid-feedback">Please enter your email address in format "name@example.com"</div>
               </div>
               <!--Phone -->
               <div class="form-group col-md-6">
                 <label for="phone_application">Phone</label>
                 <input type="tel" class="form-control" id="phone_application" name="phone_application"
                   pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Format: 1234567890" required>
+                <div class="invalid-feedback">Please enter your phone number in format "1234567890"</div>
               </div>
             </div>
             <!--Position -->
@@ -78,34 +83,37 @@
                 <option value="Ux Designer">Ux Designer</option>
                 <option value="Full Stack Developer">Full Stack Developer</option>
               </select>
+              <div class="invalid-feedback">Please provide a Position</div>
             </div>
             <!--Full or Part Time -->
-            <div class="form-row">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="fulltime_application" value="Full-Time"
-                  required>
-                <label class="form-check-label" for="fulltime_application">
-                  Full-Time
-                </label>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radios" d="fulltime_application" value="Full-Time"
+                required>
+              <label class="form-check-label" for="fulltime_application">
+                Full-Time
+              </label>
+              <div class="invalid-feedback">Please choose an Option</div>
             </div>
-            <div class="form-row">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radios" id="parttime_application" value="Part-Time">
-                <label class="form-check-label" for="parttime_application">
-                  Part-Time
-                </label>
-              </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radios" id="parttime_application" value="Part-Time">
+              <label class="form-check-label" for="parttime_application">
+                Part-Time
+              </label>
+              <div class="invalid-feedback">Please choose an Option</div>
             </div>
             <!--Text Area-->
+
             <div class="form-group">
               <label for="txtarea_application">What are your workplace skills</label>
               <textarea class="form-control" id="txtarea_application" rows="3" required></textarea>
+              <div class="invalid-feedback">Please provide your work place skills</div>
             </div>
             <!--Upload Resume -->
             <div class="form-group">
-              <label for="uploadimg_application">Upload your resume and a list of references</label>
-              <input type="file" class="form-control-file" id="uploadimg_application" required>
+              <label for="upload_application">Upload your resume and a list of references</label>
+              <input type="file" class="form-control-file" id="upload_application" multiple required>
+              <div class="invalid-feedback">Please upload your resume and a list of references</div>
             </div>
             <button type="submit" class="btn btn-outline-info">Send</button>
           </form>
@@ -126,17 +134,19 @@
         </div>
         <div class="modal-body">
           <!-- Form  -->
-          <form>
+          <form class="needs-validation" novalidate>
             <div class="form-row">
               <!-- Name  -->
               <div class="form-group col-md-6">
                 <input type="text" class="form-control" name="name_reservation" id="name_reservation" placeholder="Name"
                   autofocus required>
+                <div class="invalid-feedback">Please provide your Name</div>
               </div>
               <!-- Last Name  -->
               <div class="form-group col-md-6">
                 <input type="text" class="form-control" name="name_reservation" id="lastname_reservation"
                   placeholder="Last name" required>
+                <div class="invalid-feedback">Please provide your Last Name</div>
               </div>
             </div>
             <!-- Phone -->
@@ -149,6 +159,7 @@
                 </div>
                 <input type="tel" class="form-control" id="phone_reservation" name="phone_reservation"
                   pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Format: 1234567890" required>
+                <div class="invalid-feedback">Please enter your phone number in format "1234567890"</div>
               </div>
             </div>
             <!-- Email -->
@@ -161,6 +172,7 @@
                 </div>
                 <input type="email" class="form-control" id="email_reservation" name="email_reservation"
                   placeholder="name@example.com" required>
+                <div class="invalid-feedback">Please enter your email address in format "name@example.com"</div>
               </div>
             </div>
             <!-- Date -->
@@ -173,6 +185,7 @@
                 </div>
                 <input type="text" name="date" class="form-control datepicker" autocomplete="off"
                   placeholder="dd/mm/2020" required>
+                <div class="invalid-feedback">Please select a date from the calendar"</div>
               </div>
             </div>
             <!-- Time -->
@@ -184,8 +197,9 @@
                       <img src="icons/clock.svg" alt="Clock Icon">
                     </span>
                   </div>
-                  <input type="time" id="time_reservation" name="time_reservation" class="form-control" value="10:00"
-                    min="10:00" max="23:00" step="1800" required>
+                  <input type="text" data-time-format="H:i A" id="timepicker1" name="basicExample"
+                    placeholder="Select a Time" class="form-control time ui-timepicker-input" required>
+                  <div class="invalid-feedback">Please provide a time from 10:00 AM to 00:00 AM</div>
                 </div>
               </div>
               <!-- Persons -->
@@ -196,8 +210,30 @@
                       <img src="icons/person.svg" alt="User Icon">
                     </span>
                   </div>
-                  <input type="number" id="qty_reservartion" name="qty_reservartion" class="form-control"
-                    placeholder="1 Person" min="1" max="20" required>
+                  <select class="form-control" id="qty_reservartion" name="qty_reservartion" required>
+                    <option value="">Select an Option</option>
+                    <option value="1 Person">1 Person</option>
+                    <option value="2 Persons">2 Persons</option>
+                    <option value="3 Persons">3 Persons</option>
+                    <option value="4 Persons">4 Persons</option>
+                    <option value="5 Persons">5 Persons</option>
+                    <option value="6 Persons">6 Persons</option>
+                    <option value="7 Persons">7 Persons</option>
+                    <option value="8 Persons">8 Persons</option>
+                    <option value="9 Persons">9 Persons</option>
+                    <option value="10 Persons">10 Persons</option>
+                    <option value="11 Persons">11 Persons</option>
+                    <option value="12 Persons">12 Persons</option>
+                    <option value="13 Persons">13 Persons</option>
+                    <option value="14 Persons">14 Persons</option>
+                    <option value="15 Persons">15 Persons</option>
+                    <option value="16 Persons">16 Persons</option>
+                    <option value="17 Persons">17 Persons</option>
+                    <option value="18 Persons">18 Persons</option>
+                    <option value="19 Persons">19 Persons</option>
+                    <option value="20 Persons">20Persons</option>
+                  </select>
+                  <div class="invalid-feedback">Please select the number of persons</div>
                 </div>
               </div>
             </div>
@@ -217,11 +253,48 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.10/jquery.timepicker.js"></script>
+  <script src="  https://cdn.jsdelivr.net/npm/timepicker@1.13.10/jquery.timepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.10/package.json"></script>
+
+
   <script>
     $('.datepicker').datepicker({
+      autoclose: true,
+      todayHighlight: true,
       startDate: new Date()
     });
+  </script>
+  <script>
+    $('#timepicker1').timepicker({
+      'minTime': '10:00 am',
+      'maxTime': '00:00 am',
+      'autoclose': true
+    });
+  </script>
+  <script>
+
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation');
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add('was-validated');
+          }, false);
+        });
+    })();
   </script>
 </body>
 
