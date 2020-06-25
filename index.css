@@ -56,11 +56,10 @@ button[class="btn btn-outline-danger"]{
   color: white;
   border:1px solid white;
 }
-button[id="reservation_btn"]{
-border: 2 px solid red;
+form button[id="reservation_form"]{
+  margin:0 auto;
 }
 
-/*
 @media (min-width: 1200px) {
   img[src="icons/undraw_eco_conscious_1y58.png"] {
     margin-top: 10rem;
